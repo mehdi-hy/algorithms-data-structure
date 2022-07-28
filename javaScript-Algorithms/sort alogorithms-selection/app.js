@@ -6,7 +6,9 @@ const selection = (array) => {
         minNumber = j;
       }
     }
-    [array[i], array[minNumber]] = [array[minNumber], array[i]];
+    if (i !== minNumber) {
+      [array[i], array[minNumber]] = [array[minNumber], array[i]];
+    }
   }
   return array;
 };
